@@ -7,7 +7,7 @@ var app = express();
 // respond with "Hello World!" on the homepage
 app.get('/api/lyrics', function (req, res) {
 //res.send('Hello World!');
-es.send(lyrics);
+res.send(lyrics);
 });
 var server = app.listen(3000, function () {
 var host = server.address().address;
