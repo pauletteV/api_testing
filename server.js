@@ -3,6 +3,7 @@ var lyrics = require('./lyrics');
 
 var app = express();
 
+app.use(express.static(__dirname + '/public'));
 
 app.get('/fullLyrics', function (req, res) {
 	res.send(lyrics);
@@ -19,4 +20,3 @@ var server = app.listen(3000, function () {
 	console.log('Example app listening at http://%s:%s', host, port);
 });
 
-app.use(express.static(__dirname + '/public'));
